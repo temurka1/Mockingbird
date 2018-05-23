@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="Mockingbird.View.ActivityLog.ActivityLogView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:common="clr-namespace:Mockingbird.Common;assembly=Mockingbird.Common"
+             xmlns:activityLog="clr-namespace:Mockingbird.ViewModels.ActivityLog;assembly=Mockingbird.ViewModels"
+             d:DataContext="{d:DesignInstance activityLog:ActivityLogViewModel}"
+             mc:Ignorable="d">
+    <UserControl.Resources>
+        <common:NotificationEventToStringConverter x:Key="NotificationEventToStringConverter"/>
+    </UserControl.Resources>
+
+    <Grid>
+        <ListView ItemsSource="{Binding Activities}" VirtualizingStackPanel.IsVirtualizing="True" VirtualizingStackPanel.VirtualizationMode="Recycling">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Notification type" DisplayMemberBinding="{Binding EventType, Converter={StaticResource NotificationEventToStringConverter}}"/>
+                    <GridViewColumn Header="Message" DisplayMemberBinding="{Binding Message}"/>
+                    <GridViewColumn Header="Sender" DisplayMemberBinding="{Binding Sender}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</UserControl>

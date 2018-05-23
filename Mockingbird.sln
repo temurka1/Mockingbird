@@ -3,7 +3,34 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2018
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mockingbird", "Mockingbird\Mockingbird.csproj", "{0EF39680-8BE0-4B08-A065-C2664CB44279}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mockingbird.Tests", "Mockingbird.Tests\Mockingbird.Tests.csproj", "{2A871811-337E-4971-A8AC-2D9F5C8341CB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F46AC325-3988-48DC-B521-97F6FBA2612E} = {F46AC325-3988-48DC-B521-97F6FBA2612E}
+		{09F24930-94D9-49F1-B5F3-55CE50B53794} = {09F24930-94D9-49F1-B5F3-55CE50B53794}
+		{BE6D0E6F-F2B9-44F1-B9EA-E32FC168A16E} = {BE6D0E6F-F2B9-44F1-B9EA-E32FC168A16E}
+		{25425AED-FABD-4C6F-A2C1-3F0494D7B1E3} = {25425AED-FABD-4C6F-A2C1-3F0494D7B1E3}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mockingbird.ViewModels", "Mockingbird.ViewModels\Mockingbird.ViewModels.csproj", "{BE6D0E6F-F2B9-44F1-B9EA-E32FC168A16E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{09F24930-94D9-49F1-B5F3-55CE50B53794} = {09F24930-94D9-49F1-B5F3-55CE50B53794}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mockingbird.Mocks", "Mockingbird.Mocks\Mockingbird.Mocks.csproj", "{F46AC325-3988-48DC-B521-97F6FBA2612E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{534D1F25-60FB-454D-A6F2-BE3174C041BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mockingbird.View", "Mockingbird.View\Mockingbird.View.csproj", "{C36D4EA8-57ED-43CD-BD3C-71E84CBFCDFF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{25425AED-FABD-4C6F-A2C1-3F0494D7B1E3} = {25425AED-FABD-4C6F-A2C1-3F0494D7B1E3}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mockingbird.BusinessLogic", "Mockingbird.BusinessLogic\Mockingbird.BusinessLogic.csproj", "{09F24930-94D9-49F1-B5F3-55CE50B53794}"
+	ProjectSection(ProjectDependencies) = postProject
+		{25425AED-FABD-4C6F-A2C1-3F0494D7B1E3} = {25425AED-FABD-4C6F-A2C1-3F0494D7B1E3}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mockingbird.Common", "Mockingbird.Common\Mockingbird.Common.csproj", "{25425AED-FABD-4C6F-A2C1-3F0494D7B1E3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,13 +38,37 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0EF39680-8BE0-4B08-A065-C2664CB44279}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0EF39680-8BE0-4B08-A065-C2664CB44279}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0EF39680-8BE0-4B08-A065-C2664CB44279}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0EF39680-8BE0-4B08-A065-C2664CB44279}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A871811-337E-4971-A8AC-2D9F5C8341CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A871811-337E-4971-A8AC-2D9F5C8341CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A871811-337E-4971-A8AC-2D9F5C8341CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A871811-337E-4971-A8AC-2D9F5C8341CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE6D0E6F-F2B9-44F1-B9EA-E32FC168A16E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE6D0E6F-F2B9-44F1-B9EA-E32FC168A16E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE6D0E6F-F2B9-44F1-B9EA-E32FC168A16E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE6D0E6F-F2B9-44F1-B9EA-E32FC168A16E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F46AC325-3988-48DC-B521-97F6FBA2612E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F46AC325-3988-48DC-B521-97F6FBA2612E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F46AC325-3988-48DC-B521-97F6FBA2612E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F46AC325-3988-48DC-B521-97F6FBA2612E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C36D4EA8-57ED-43CD-BD3C-71E84CBFCDFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C36D4EA8-57ED-43CD-BD3C-71E84CBFCDFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C36D4EA8-57ED-43CD-BD3C-71E84CBFCDFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C36D4EA8-57ED-43CD-BD3C-71E84CBFCDFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09F24930-94D9-49F1-B5F3-55CE50B53794}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09F24930-94D9-49F1-B5F3-55CE50B53794}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09F24930-94D9-49F1-B5F3-55CE50B53794}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09F24930-94D9-49F1-B5F3-55CE50B53794}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25425AED-FABD-4C6F-A2C1-3F0494D7B1E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25425AED-FABD-4C6F-A2C1-3F0494D7B1E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25425AED-FABD-4C6F-A2C1-3F0494D7B1E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25425AED-FABD-4C6F-A2C1-3F0494D7B1E3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2A871811-337E-4971-A8AC-2D9F5C8341CB} = {534D1F25-60FB-454D-A6F2-BE3174C041BF}
+		{F46AC325-3988-48DC-B521-97F6FBA2612E} = {534D1F25-60FB-454D-A6F2-BE3174C041BF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3CE3AD9E-5A34-4693-BDDF-BBD6C721A9B5}
